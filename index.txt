@@ -53,10 +53,6 @@ alt = mobile app icon
 Mobile Game Development
 Currently learning more about and creating my first game.
 
-alt = camera icon
-AI
-I make AI integrations for simple comercial sites.
-
 
 # resume
 
