@@ -89,6 +89,6 @@ Web design
 Mobile Applications
 60%
 Full-stack Development
-80%
+70%
 AI integrations
 50%
