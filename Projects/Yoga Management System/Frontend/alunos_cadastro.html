@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão Kaiut Yoga</title>
+    <title>Gestão Yoga</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,7 @@
     </div>
 
     <header>
-        <h1>Sistema de Gestão Kaiut Yoga</h1>
+        <h1>Sistema de Gestão Yoga</h1>
         <nav>
             <ul>
                 <!-- Menu Alunos -->
@@ -56,13 +56,25 @@
             </ul>
         </nav>
     </header>
+    
     <main>
         <section id="cadastro">
-            <h2>Cadastrar Plano</h2>
+            <h2>Cadastrar Aluno</h2>
             <form id="cadastro-form">
-                <input type="text" name="nome" placeholder="Nome" required>
-                <input type="text" name="aulas" placeholder="Seções" required>
-                <input type="text" name="valor" placeholder="Valor" required>
+                <input type="text" name="cliente" placeholder="Nome" required>
+                <input type="date" name="nascimento" placeholder="Nascimento" required>
+                <input type="text" name="sexo" placeholder="Sexo" required>
+                <input type="text" name="status" placeholder="Status" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="contato" placeholder="Contato" required>
+                <input type="text" name="cpf" placeholder="CPF" required>
+                <input type="text" name="cep" placeholder="CEP" required>
+                <input type="text" name="logradouro" placeholder="Logradouro" required>
+                <input type="text" name="numero" placeholder="Número" required>
+                <input type="text" name="complemento" placeholder="Complemento" required>
+                <input type="text" name="bairro" placeholder="Bairro" required>
+                <input type="text" name="cidade" placeholder="Cidade" required>
+                <input type="text" name="uf" placeholder="UF" required>
                 <button type="submit">Cadastrar</button>
             </form>
         </section>
@@ -77,7 +89,7 @@
                 data[key] = value;
             });
 
-            fetch('http://localhost:3000/planos', {
+            fetch('http://localhost:3000/alunos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -91,12 +103,12 @@
                 return response.json();
             })
             .then(data => {
-                alert('Plano cadastrado com sucesso!');
+                alert('Aluno cadastrado com sucesso!');
                 this.reset();
             })
             .catch(error => {
                 console.error('Erro:', error);
-                alert('Erro ao cadastrar plano');
+                alert('Erro ao cadastrar aluno');
             });
         });
     </script>
